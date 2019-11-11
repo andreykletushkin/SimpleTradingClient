@@ -1,0 +1,18 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="testSubmit()">
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>User name</mat-label>
+    <input matInput placeholder="User name" formControlName="login">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" formControlName="password">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+</p>
+  <button mat-button color="accent" class="button" type="submit">Login</button>
+</form>
+<mat-error *ngIf="error">Username or password is wrong</mat-error>

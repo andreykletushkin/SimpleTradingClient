@@ -1,0 +1,30 @@
+.example-container {
+  postextition: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+}
+
+mat-sidenav-container {
+  text-align:center;
+  height:100%
+}
+
+.mat-list-item {
+  border:5px;
+  font-size: 22px;
+}
+mat-grid-tile {
+  background-color: gray;
+}
+/*.example-card {*/
+/*  max-width: 30%;*/
+/*}*/
+
+/*mat-sidenav {*/
+/*  background-color: rgba(191, 179, 34, 0.6);*/
+/*}*/
+
+

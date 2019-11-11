@@ -1,0 +1,27 @@
+<mat-card class="example-card">
+  <mat-card-title>Hello, {{name}}</mat-card-title>
+  <mat-card-subtitle>Profile details</mat-card-subtitle>
+  <form [formGroup]="profileForm" (ngSubmit)="save()">
+    <mat-form-field appearance="standard">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="User name" formControlName="firstName">
+    </mat-form-field>
+    <p>
+      <mat-form-field appearance="standard">
+        <mat-label>Second Name</mat-label>
+        <input matInput placeholder="Second Name" formControlName="secondName">
+      </mat-form-field>
+    <p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Birthday" formControlName="birthday">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    <p>
+      <mat-form-field>
+        <textarea matInput placeholder="Short profile description" formControlName="description"></textarea>
+      </mat-form-field>
+    <p>
+      <button mat-button color="accent" class="button" type="submit">Submit profile</button>
+  </form>
+</mat-card>

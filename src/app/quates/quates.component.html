@@ -1,0 +1,21 @@
+<h3>Choose a symbol to watch:</h3>
+  <mat-form-field>
+    <input type="text" placeholder="Please choose symbol" matInput [formControl]="myControl" [matAutocomplete]="auto">
+  <mat-autocomplete   #auto="matAutocomplete">
+    <mat-option  *ngFor="let symbol of filteredOption | async" [value] = "symbol">
+      {{symbol}}
+    </mat-option>
+  </mat-autocomplete>
+  </mat-form-field>
+<button (click)="ok()"  mat-button color="primary" class="button" type="submit">Add chart</button>
+<div class="flex-container">
+  <fusioncharts *ngFor="let dataSource of dataArray"
+    [type]="type"
+    [width]="width"
+    [height]="height"
+    [dataSource]="dataSource"></fusioncharts>
+</div>
+
+
+
+
